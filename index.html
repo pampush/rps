@@ -1,9 +1,37 @@
 <html>
-    <head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+  </head>
+  <body>
+  <div class="container">
+    <div class="comp__container">
+      <div class='comp__container-row'>
+        <div class="turn__item comp__play">
+          <span>computer</span>
+        </div>
+      </div> 
+      
+      <div class="comp__container-row">
+        <div class="score__result">
+          <span>lose</span>
+        </div>
+      </div>
+    </div>
+     
+    <div class="pl__container">
+      <div class="turn__item pl__container-rock"><span>rock</span></div>
+      <div class="turn__item pl__container-paper"><span>paper</span></div>
+      <div class="turn__item pl__container-scissors"><span>scissors</span></div>
+    </div>
+    <div class="score">
+      <div class="score__title">SCORE</div>
+      <div class="score__box"><span class="score__box-player">0</span> - <span class="score__box-comp">0</span></div>
+    </div>
 
-    </head>
-    <body>
-      <script src="logic.js">
-      </script> 
-    </body>
+  </div>
+    <script src="devLogic.js">
+    </script> 
+  </body>
 </html>

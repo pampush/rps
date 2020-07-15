@@ -1,0 +1,117 @@
+html {
+  font-size: 10px;
+  /*background: url("bg.png") repeat;*/
+  background-color: rgba(0,0,0,.05);
+  background-size: 10%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;  
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.comp__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.comp__container-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comp__play {
+
+}
+
+.pl__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.turn__item {
+  padding: 16rem 0 1rem 0;
+  flex: 0 0 200px;
+  text-align: center;
+  margin: 0 1rem; 
+  border: 1px solid black;
+  border-radius: 1rem;
+  transition: all .1s ease;
+}
+
+.turn__item-clicked {
+  transform: rotate(2deg) scale(1.1);
+  box-shadow: 0 0 1rem rgba(0,0,0,.5);
+}
+
+.turn__item-win {
+  box-shadow: 0 0 3rem rgba(8, 250, 0, 0.5);
+}
+
+
+.turn__item-lose {
+  box-shadow: 0 0 3rem rgba(255, 20, 20, 0.5);
+}
+
+.turn__item span {
+  text-shadow: 0 0 0.5rem black;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.comp__play {
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5));
+}
+
+
+.pl__container-rock {
+  background: center/contain no-repeat url("../img/rock.png"), linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5));
+}
+
+.pl__container-paper {
+  background: center/contain no-repeat url("../img/paper.png"),  linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5));
+  
+}
+
+.pl__container-scissors {
+  background: center/contain no-repeat url("../img/scissors.png"), linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5));
+}
+
+/*.turn-item__pressed*/
+
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.score__result {
+  font-size: 5rem;
+}
+.score__title {
+  font-size: 8rem;
+}
+
+.score__box {
+  font-size: 5rem;
+}
