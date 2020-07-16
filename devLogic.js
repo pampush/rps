@@ -9,8 +9,9 @@ let logic = {
     return this.result[res];
   }
 } 
+
 /**
- * 
+ *  
  */
 let gameScore = { 
   compScore: 0,
@@ -57,14 +58,24 @@ function computerPlay() {
 }
 
 /**
- * Game logic implementation and output 
- *   
+ * check if any player achieve 5 points
  */
 function endGame () {
-  let fin = (gameScore.playerScore == 5) ? 'You won' : (gameScore.compScore == 5) ? 'Computer won' : null;
+  let fin = (gameScore.playerScore == 5) ? 'You win' : (gameScore.compScore == 5) ? 'Computer wins' : null;
   if (fin) {
     let scoreBlock = document.querySelector('.score__result'); 
+    let scoreBox = document.querySelectorAll('.score__box-comp, .score__box-player');
+    
     scoreBlock.textContent = fin;
+    gameScore.compScore = 0;
+    gameScore.playerScore = 0; // how to assign same value with spread operator?
+
+    /* 1.5 seconds delay before next game */
+    plSelect.forEach(elem => elem.removeEventListener('click', playRound));   
+    setTimeout(() => { scoreBlock.textContent ="Choose Your Weapon"; 
+      plSelect.forEach(elem => elem.addEventListener('click', playRound));
+      scoreBox.forEach((elem) => elem.textContent = '0');
+      }, 1500);
   }
 } 
 
@@ -80,7 +91,7 @@ function playRound (elem) {
       elem.style.cssText = " ";
     }
   }
-  let time = setTimeout(closure(this), 500);
+  setTimeout(closure(this), 500);
   endGame();
 }
 

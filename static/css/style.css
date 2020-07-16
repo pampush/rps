@@ -25,7 +25,7 @@ body,html {
 
 .comp__container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
 }
@@ -100,16 +100,12 @@ body,html {
 
 .score {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .score__result {
   font-size: 5rem;
-}
-.score__title {
-  font-size: 8rem;
 }
 
 .score__box {
