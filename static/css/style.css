@@ -95,9 +95,6 @@ body,html {
   background: center/contain no-repeat url("../img/scissors.png"), linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5));
 }
 
-/*.turn-item__pressed*/
-
-
 .score {
   display: flex;
   justify-content: center;

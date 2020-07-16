@@ -52,7 +52,11 @@ function computerPlay() {
   let num = Math.floor(Math.random() * 3); 
   let arr = ['rock', 'paper', 'scissors'];
   let comp = document.querySelector('.comp__play');
-  comp.style.cssText=`background: center/contain no-repeat url("./static/img/${arr[num]}.png"), linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5));`
+  if(comp.classList.length == 3)
+    comp.classList.remove(comp.classList[2]);
+  comp.classList.add(`pl__container-${arr[num]}`);
+  /* issue with repeating images dowload
+  comp.style.cssText=`background: center/contain no-repeat url("./static/img/${arr[num]}.png"), linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5));` */
   comp.innerHTML = `<span>${arr[num]}</span>`;
   return arr[num];
 }
